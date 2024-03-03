@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,900&display=swap');
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    transition: .5s all linear;
+}
+
+body{
+    background: url(https://ak.picdn.net/shutterstock/videos/1061577529/thumb/2.jpg?ip=x480);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+/* ..................main.................. */
+
+.main{
+    width: 500px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.main h1{
+    font-size: 4rem;
+    font-weight: 900;
+    color: white;
+    text-shadow: .3rem .2rem .2rem black;
+}
+
+/* ..................form.................. */
+
+.main form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.main form input{
+    margin: 0 .2rem;
+    padding: .2rem;
+    width: 14rem;
+    font-size: 1.1rem;
+    border: 3px ridge gray;
+}
+
+.main form button{
+    margin: 0 .2rem;
+    padding: .2rem;
+    font-size: 1.1rem;
+    border: 3px ridge gray;
+    cursor: pointer;
+}
+
+.main form select{
+    margin: 0 .2rem;
+    padding: .2rem;
+    font-size: 1.1rem;
+    border: 3px ridge gray;
+    cursor: pointer;
+}
+
+.main form select option{
+    font-style: italic;
+}
+
+/* ..................todo.................. */
+
+.todo{
+    margin: -5px auto;
+    width: 412px;
+    max-height: 380px;
+    overflow-y: scroll;
+}
+
+.todo::-webkit-scrollbar{
+    width: 1rem;
+}
+
+.todo::-webkit-scrollbar-track{
+    background: grey;
+    border-radius: .5rem; 
+}
+
+.todo::-webkit-scrollbar-thumb{
+    background: yellow;
+    border-radius: .5rem; 
+}
+
+.todo .todo-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 10px 10px 10px;
+    position: relative;
+    padding: .8rem .8rem .8rem 1rem;
+    border: 5px ridge gray;
+    box-shadow: .2rem .2rem .8rem white;
+    background-color: palegreen;
+    font-size: 1.1rem;
+}
+
+.todo .todo-list.active{
+    font-style: italic;
+    opacity: .4;
+    text-decoration: line-through;
+}
+
+.todo .todo-list .text{
+    display: flex;
+}
+
+.todo .todo-list .text .color{
+    position: absolute;
+    top: 0; left: 0;
+    width: 10px;
+    height: 100%;
+    background-color: aqua;
+}
+
+.todo .todo-list .color-icon{
+    position: absolute;
+    top: 0; right: 0;
+    background-color: rgb(5, 131, 189);
+    width: 60px; 
+    height: 48px;
+}
+
+.todo .todo-list .icons{
+    font-size: 1.1rem;
+    z-index: 1;
+}
+
+.todo .todo-list .icons .fa-circle-check{
+    color: rgb(189, 255, 89);
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.todo .todo-list .icons .fa-trash{
+    color: rgb(153, 58, 82);
+    margin-right: -2px;
+    cursor: pointer;
+}
+
+/* ..................deleted buttons.................. */
+
+.deleted{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 0 0;
+}
+
+.deleted .remove-selected{
+    display: none;
+    margin: 0 .2rem;
+    padding: .2rem;
+    font-size: 1rem;
+    font-weight: 900;
+    color: white;
+    border: 3px ridge rgb(185, 185, 185);
+    background-color: green;
+    cursor: pointer;
+}
+
+.deleted .remove-all{
+    display: none;
+    margin: 0 .2rem;
+    padding: .2rem;
+    font-size: 1rem;
+    font-weight: 900;
+    color: white;
+    border: 3px ridge rgb(185, 185, 185);
+    background-color: red;
+    cursor: pointer;
+}
+
+
+
